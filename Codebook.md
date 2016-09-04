@@ -17,8 +17,10 @@ details on dataset creation.
 4. Uses descriptive activity names to name the activities in the data set
  * read 'activity_label.txt' file, and rename its columns
  * merge dt_part and activity_label.txt by featureCode
-5. Create a new tidy data set with the average variable for each activity and each subject
-
+5. Create a new tidy data set with the average variable for each activity and each subject\
+ * creat new columns:featDomain, featAcceleration, featInstrument, featJerk, featMagnitude, featVariable, featAxis 
+ * calculate the average of each new variable by the key of dt_part
+ * restore the new tidy dataset as tidy_data.txt
 
 
 
