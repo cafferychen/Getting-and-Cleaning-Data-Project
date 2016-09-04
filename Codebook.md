@@ -5,11 +5,19 @@ details on dataset creation.
 ## Steps of Transformation
 1. Download the data and read the files in the train dataset and the test dataset
  * use download.file() and read.table() function 
-2. Merge the train and test sets by the order--first train,then test
- * Rename the column name: subject, activityNum
- * Convert the merged dataset into data table, and set 'subject','activityNum' as its key
+2. Merge the train and test sets following the order--first train,then test
+ * rename the column name: subject, activityNum
+ * convert the merged dataset into data table, and set 'subject','activityNum' as its key
+ * the merged data is called dt
  * use rbind(), cbind(), rename(), setkey() function
-3. 
+3. Extracts only the measurements on the mean and standard deviation for each measurement
+ * use regular expression and grepl() function to extract the corresponding features from 'feature.txt' file
+ * extract data from dt, called dt_part
+ * use grepl(), paste0() function and column selection in data table
+4. Uses descriptive activity names to name the activities in the data set
+ * read 'activity_label.txt' file, and rename its columns
+ * merge dt_part and activity_label.txt by featureCode
+5. Create a new tidy data set with the average variable for each activity and each subject
 
 
 
