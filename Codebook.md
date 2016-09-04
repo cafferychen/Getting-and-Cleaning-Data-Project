@@ -2,7 +2,19 @@
 Codebook was generated on 2016-09-3 during the same process that generated the dataset.See run_analysis.r for
 details on dataset creation.
 
-## Variable list and descriptions
+## Steps of Transformation
+1. Download the data and read the files in the train dataset and the test dataset
+ * use download.file() and read.table() function 
+2. Merge the train and test sets by the order--first train,then test
+ * Rename the column name: subject, activityNum
+ * Convert the merged dataset into data table, and set 'subject','activityNum' as its key
+ * use rbind(), cbind(), rename(), setkey() function
+3. 
+
+
+
+
+## Variable list and descriptions of the tidy dataset
 | Variable Name  |     Description    |
 | -------------  | -----------------  |
 |  Subject       | ID the subject who performed the activity for each window sample. Its range is from 1 to 30.|
